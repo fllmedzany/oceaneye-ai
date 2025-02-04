@@ -171,11 +171,6 @@ results = model.predict(source="fish_aquarium.mp4", show=True, save=True)
     - YOLOv8 nano (yolov8n.pt) je veľmi rýchly a malý. Môže sa hodiť, ak chcete bežať detekciu v reálnom čase aj na slabšom HW.
     - Pre lepšiu presnosť môžete skúsiť yolov8s.pt (small), yolov8m.pt (medium), atď.
     - Čím väčší model, tým náročnejší tréning. Ale RTX 4060 by mala hravo zvládnuť aspoň small či medium verziu.
-**Ak by ste chceli iba klasifikáciu**
-    - Napr. rozoznávať druhy rýb na jednotlivých fotkách (bez bounding boxov).
-    - YOLOv8 podporuje aj yolo classify train ....
-    - Štruktúra datasetu je iná: train/TRYDA_1, train/TRYDA_2, atď. (zložky podľa tried).
-    - Postup je veľmi podobný, len sa mení príkaz a formát datasetu.
 
 **5\. Zhrnutie**
 
