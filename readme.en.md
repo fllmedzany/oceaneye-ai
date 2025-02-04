@@ -161,3 +161,5 @@ yolo detect predict model=fish_detect/exp1/best.pt source=fish_aquarium.mp4
    ```yolo detect predict model=best.pt source=video.mp4```
 6. Optionally fine-tune parameters for better performance.
 
+
+example video of our AI: (https://www.youtube.com/watch?v=LG57YVFjZCo)
