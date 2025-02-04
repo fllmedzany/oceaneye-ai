@@ -20,10 +20,11 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
 
 **1\. Nastavenie prostredia (Windows)**
 1. **Aktualizujte ovládače a nainštalujte CUDA (voliteľné)**
+    - ak nemas NVIDIA tak toto vynechaj
     - Na NVIDIA RTX 4060 by malo stačiť, ak máte aktuálny driver z [NVIDIA stránky](https://www.nvidia.com/Download/index.aspx).
     - Oficiálna inštalácia CUDA Toolkitu (z [developer.nvidia.com](https://developer.nvidia.com/cuda-toolkit)) nie je nevyhnutná, ak nainštalujete PyTorch s podporou GPU, ale môže byť užitočná.
     - Na overenie, či CUDA a ovládače bežia, môžete využiť príkaz nvidia-smi v termináli.
-2. **Nainštalujte si Python (3.8+, ideálne 3.9 alebo 3.10)**
+3. **Nainštalujte si Python (3.8+, ideálne 3.9 alebo 3.10)**
     - Odporúčame vytvoriť si virtuálne prostredie cez venv.
     ```
     cd c:\
@@ -32,7 +33,7 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
     c:\Python310\python.exe -m venv c:\moje_projekty\oceaneye-ai
     c:\moje_projekty\oceaneye-ai\Scripts\activate
     ```
-3. **Nainštalujte PyTorch s podporou CUDA**
+4. **Nainštalujte PyTorch s podporou CUDA (len ak máč NVIDIA GPU)**
     - Na stránke [pytorch.org](https://pytorch.org/get-started/locally/) si vygenerujte príkaz pre inštaláciu verzie s podporou CUDA. Napr. (príklad, môže sa meniť podľa verzií):
     - ```pip install torch torchvision torchaudio --index-url <https://download.pytorch.org/whl/cu118>```
     - Skontrolujte, či vám PyTorch rozpoznal GPU:
@@ -41,7 +42,7 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
     import torch
     print(torch.cuda.is_available()) # malo by vypísať True
     ```
-4. **Nainštalujte ultralytics (YOLOv8)**
+5. **Nainštalujte ultralytics (YOLOv8)**
     - Jednoducho:
     - ```pip install ultralytics```
 
