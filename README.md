@@ -1,10 +1,10 @@
 # oceaneye-ai
-Toto je návod ako si vytvoriť jednoduchú umelú inteligenciu na rozpoznávanie druhov rýb.
+Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoznávanie druhov rýb. Na trénovanie použijeme python a knižnice ultralytics, dataset vytvoríme v programe LabelStudio (opensource)
 
 **Anotovanie**
 
 - fotky môžete anotovať v programe LabelStudio (opensorce)
-- najprv si tam spravíte svoj účet
+- najprv si spravíte svoj účet
 - potom si vytvoríte projekt, do ktorého importujete svoje fotky a vyberiete si typ anotovania a pridáte si classes, do ktorých budete chcieť triediť
 - potom môžte rovno anotovať
 - keď to budete mať hotové, stiahnite si dataset vo formáte YOLOv8
@@ -16,22 +16,32 @@ Toto je návod ako si vytvoriť jednoduchú umelú inteligenciu na rozpoznávani
 - Má priamo zabudované príkazy na tréning, vyhodnocovanie a dokonca aj detekciu z videí alebo obrázkov.
 - Podporuje GPU ak máte nainštalovaný správny CUDA driver a PyTorch s podporou GPU.
 
+**Keď máme dataset, možme ísť trénovať. Vhodný je počítač s NVIDIA grafikou, urýchli to proces**
 
 **1\. Nastavenie prostredia (Windows)**
-
-1.1. **Aktualizujte ovládače a nainštalujte CUDA (voliteľné)**
+1. **Aktualizujte ovládače a nainštalujte CUDA (voliteľné)**
     - Na NVIDIA RTX 4060 by malo stačiť, ak máte aktuálny driver z [NVIDIA stránky](https://www.nvidia.com/Download/index.aspx).
     - Oficiálna inštalácia CUDA Toolkitu (z [developer.nvidia.com](https://developer.nvidia.com/cuda-toolkit)) nie je nevyhnutná, ak nainštalujete PyTorch s podporou GPU, ale môže byť užitočná.
     - Na overenie, či CUDA a ovládače bežia, môžete využiť príkaz nvidia-smi v termináli.
-1.2. **Nainštalujte si Python (3.8+, ideálne 3.9 alebo 3.10)**
-    - Odporúča sa vytvoriť si virtuálne prostredie – napr. cez [Anacondu](https://www.anaconda.com/products/individual) alebo venv.
-1.3. **Nainštalujte PyTorch s podporou CUDA**
+2. **Nainštalujte si Python (3.8+, ideálne 3.9 alebo 3.10)**
+    - Odporúčame vytvoriť si virtuálne prostredie cez venv.
+    ```
+    cd c:\
+    mkdir moje_projekty
+    cd moje_projekty
+    c:\Python310\python.exe -m venv c:\moje_projekty\oceaneye-ai
+    c:\moje_projekty\oceaneye-ai\Scripts\activate
+    ```
+3. **Nainštalujte PyTorch s podporou CUDA**
     - Na stránke [pytorch.org](https://pytorch.org/get-started/locally/) si vygenerujte príkaz pre inštaláciu verzie s podporou CUDA. Napr. (príklad, môže sa meniť podľa verzií):
-    - pip install torch torchvision torchaudio --index-url <https://download.pytorch.org/whl/cu118>
+    - ```pip install torch torchvision torchaudio --index-url <https://download.pytorch.org/whl/cu118>```
     - Skontrolujte, či vám PyTorch rozpoznal GPU:
-    - import torch
-    - print(torch.cuda.is_available()) # malo by vypísať True
-1.4. **Nainštalujte ultralytics (YOLOv8)**
+    ```
+    python
+    import torch
+    print(torch.cuda.is_available()) # malo by vypísať True
+    ```
+4. **Nainštalujte ultralytics (YOLOv8)**
     - Jednoducho:
     - ```pip install ultralytics```
 
