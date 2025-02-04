@@ -181,3 +181,7 @@ results = model.predict(source="fish_aquarium.mp4", show=True, save=True)
 6. Po skončení tréningu použite model na detekciu na nových obrázkoch či videách:
 7. ```yolo detect predict model=best.pt source=video.mp4```
 8. (Voliteľne) dolaďte augmentácie, hyperparametre, väčší model, atď.
+
+
+
+link na príkladové video našej AI: (https://www.youtube.com/watch?v=LG57YVFjZCo)
