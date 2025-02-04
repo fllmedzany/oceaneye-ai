@@ -1,9 +1,9 @@
 # oceaneye-ai
-Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoznávanie druhov rýb. Na trénovanie použijeme python a knižnice ultralytics, dataset vytvoríme v programe LabelStudio (opensource)
+Toto je návod ako si natrénovať model umelej inteligenice na rozpoznávanie druhov rýb. Na trénovanie použijeme python a knižnice ultralytics, dataset vytvoríme v programe LabelStudio (opensource)
 
 **Anotovanie**
 
-- fotky môžete anotovať v programe LabelStudio (opensorce)
+- fotky môžete anotovať v programe LabelStudio (opensource)
 - najprv si spravíte svoj účet
 - potom si vytvoríte projekt, do ktorého importujete svoje fotky a vyberiete si typ anotovania a pridáte si classes, do ktorých budete chcieť triediť
 - potom môžte rovno anotovať
@@ -12,7 +12,7 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
 **Prečo YOLOv8?**
 
 - Je veľmi užívateľsky prívetivá.
-- Dá sa jednoducho nainštalovať cez pip install ultralytics.
+- Dá sa jednoducho nainštalovať cez ```pip install ultralytics```.
 - Má priamo zabudované príkazy na tréning, vyhodnocovanie a dokonca aj detekciu z videí alebo obrázkov.
 - Podporuje GPU ak máte nainštalovaný správny CUDA driver a PyTorch s podporou GPU.
 
@@ -20,7 +20,7 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
 
 **1\. Nastavenie prostredia (Windows)**
 1. **Aktualizujte ovládače a nainštalujte CUDA (voliteľné)**
-    - ak nemas NVIDIA tak toto vynechaj
+    - ak nemáš NVIDIA tak toto vynechaj
     - Na NVIDIA RTX 4060 by malo stačiť, ak máte aktuálny driver z [NVIDIA stránky](https://www.nvidia.com/Download/index.aspx).
     - Oficiálna inštalácia CUDA Toolkitu (z [developer.nvidia.com](https://developer.nvidia.com/cuda-toolkit)) nie je nevyhnutná, ak nainštalujete PyTorch s podporou GPU, ale môže byť užitočná.
     - Na overenie, či CUDA a ovládače bežia, môžete využiť príkaz nvidia-smi v termináli.
@@ -43,13 +43,12 @@ Toto je návod ako si vytvoriť natrénovať model umelej inteligenice na rozpoz
     print(torch.cuda.is_available()) # malo by vypísať True
     ```
 5. **Nainštalujte ultralytics (YOLOv8)**
-    - Jednoducho:
     - ```pip install ultralytics```
 
 **2\. Príprava dát (dataset)**
 
-Predpokladajme, že ide o **detekčný** dataset (čiže máte bounding boxy (ohraničujúce boxy) pre ryby). Ak ide iba o **klasifikáciu** (t. j. obrázok patrí nejakej rybe alebo nie, prípadne aký druh ryby), je to trošku iné, ale väčšina ľudí chce v akváriu ryby nielen rozoznať, ale aj lokalizovať.
-Vytvorte si dataset napríklad v programe LabelStudio https://labelstud.io/ 
+Predpokladajme, že ide o **detekčný** dataset (čiže máte bounding boxy (ohraničujúce boxy) pre ryby).
+Vytvorte si dataset napríklad v programe [LabelStudio](https://labelstud.io/) 
 
 **Dataset v YOLO formáte**
 
