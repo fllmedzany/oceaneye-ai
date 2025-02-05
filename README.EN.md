@@ -1,4 +1,7 @@
 # oceaneye-ai
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/fllmedzany/oceaneye-ai/blob/main/README.EN.md)
+[![sk](https://img.shields.io/badge/lang-sk-blue.svg)](https://github.com/fllmedzany/oceaneye-ai/blob/main/README.md)
+
 This is a guide on how to train an artificial intelligence model for recognizing fish species. We will use Python and the Ultralytics library for training, and create the dataset using the LabelStudio program (open-source).
 
 **Annotation**
