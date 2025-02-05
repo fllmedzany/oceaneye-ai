@@ -1,4 +1,7 @@
 # oceaneye-ai
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/fllmedzany/oceaneye-ai/blob/main/README.EN.md)
+[![sk](https://img.shields.io/badge/lang-sk-blue.svg)](https://github.com/fllmedzany/oceaneye-ai/blob/main/README.md)
+
 Toto je návod ako si natrénovať model umelej inteligenice na rozpoznávanie druhov rýb. Na trénovanie použijeme python a knižnice ultralytics, dataset vytvoríme v programe LabelStudio (opensource)
 
 **Anotovanie**
