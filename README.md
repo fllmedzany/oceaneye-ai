@@ -100,7 +100,7 @@ Ak už máte dataset v nejakom inom formáte (napr. COCO JSON, Pascal VOC XML a 
 **Základné trénovanie s YOLOv8**  
     Dá sa to spustiť úplne “z príkazovej riadky” alebo cez Python.
 
-**Z príkazovej riadky**:
+**Z príkazového riadku**:
 ```
 yolo detect train data=path/to/data.yaml model=yolov8n.pt epochs=50 imgsz=640
 ```
