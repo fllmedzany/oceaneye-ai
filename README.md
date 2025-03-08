@@ -12,12 +12,6 @@ Toto je návod ako si natrénovať model umelej inteligenice na rozpoznávanie d
 - potom môžte rovno anotovať
 - keď to budete mať hotové, stiahnite si dataset vo formáte YOLOv8
 
-**Prečo YOLOv8?**
-
-- Je veľmi užívateľsky prívetivá.
-- Dá sa jednoducho nainštalovať cez ```pip install ultralytics```.
-- Má priamo zabudované príkazy na tréning, vyhodnocovanie a dokonca aj detekciu z videí alebo obrázkov.
-- Podporuje GPU ak máte nainštalovaný správny CUDA driver a PyTorch s podporou GPU.
 
 **Keď máme dataset, možme ísť trénovať. Vhodný je počítač s NVIDIA grafikou, urýchli to proces**
 
