@@ -4,7 +4,7 @@
 
 Toto je návod ako si natrénovať model umelej inteligenice na rozpoznávanie druhov rýb. Na trénovanie použijeme python a knižnice ultralytics, dataset vytvoríme v programe LabelStudio (opensource)
 
-**Anotovanie**
+**Anotovanie a dataset**
 
 - fotky môžete anotovať v programe LabelStudio (opensource)
 - najprv si spravíte svoj účet
