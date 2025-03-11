@@ -1,4 +1,4 @@
-**Ukážková aplikácia, ktorá načíta vstupné video a vytvorí výstupné video len s tými časťami na ktorých identifikuje rybu "mrenka" 
+**Ukážková aplikácia, ktorá načíta vstupné video a vytvorí výstupné video len s tými časťami, na ktorých identifikuje rybu "mrenka", 
 meníme tieto parametre:**
 
 ```
