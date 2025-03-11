@@ -8,6 +8,7 @@ yolo_model = YOLO('oceaneye-ai.pt')  # Nahraď "model.pt" svojim modelom
 # Cesta k vstupnému videu
 input_video_path = 'VID10.mp4'  # Nahraď svojím súborom
 output_video_path = "output_filtered.mp4"
+searched_fish = "mrenka"
 
 # Otvorenie vstupného videa
 cap = cv2.VideoCapture(input_video_path)
@@ -36,7 +37,7 @@ while cap.isOpened():
             cls = int(box.cls[0])  # Index detekovanej triedy
             label = yolo_model.names[cls]  # Názov triedy
             
-            if label.lower() == "mrenka":
+            if label.lower() == searched_fish:
                 detected = True
                 x1, y1, x2, y2 = map(int, box.xyxy[0])  # Koordináty rámčeka
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)  # Kreslenie rámčeka
