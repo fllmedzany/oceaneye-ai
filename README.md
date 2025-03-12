@@ -160,10 +160,7 @@ results = model.predict(source="fish_aquarium.mp4", show=True, save=True)
 2. **Augmentácie**
     - YOLOv8 má v základe aplikované rozumné augmentácie (random flipy, orezanie, apod.), ktoré pomáhajú zlepšiť robustnosť.
     - Netreba väčšinou nič extra nastavovať, ale dá sa to ľahko doladiť, ak by ste chceli špecifické augmentácie.
-3. **Monitorovanie tréningu**
-    - YOLOv8 generuje priebežne grafy (loss, mAP, atď.) do priečinku s experimentom.
-    - V reálnom čase si môžete logy pozerať v termináli.
-4. **Výber modelu**
+3. **Výber modelu**
     - YOLOv8 nano (yolov8n.pt) je veľmi rýchly a malý. Môže sa hodiť, ak chcete bežať detekciu v reálnom čase aj na slabšom HW.
     - Pre lepšiu presnosť môžete skúsiť yolov8s.pt (small), yolov8m.pt (medium), atď.
     - Čím väčší model, tým náročnejší tréning. Ale RTX 4060 by mala hravo zvládnuť aspoň small či medium verziu.
