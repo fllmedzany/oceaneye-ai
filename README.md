@@ -87,9 +87,9 @@ Kde prvé číslo je **ID triedy** (napr. 0 = Mečúň, 1 = Mrenka, …) a ďal�
 train: path/to/fish_dataset/images/train
 val: path/to/fish_dataset/images/val
 names:
-0: Mečúň
-1: Mrenka
-2: Ostatné ryby
+    0: Mečúň
+    1: Mrenka
+    2: Ostatné ryby
 ```
 (Prispôsobte podľa toho, koľko máte tried a aké majú názvy.)
 
