@@ -32,7 +32,7 @@ Toto je návod ako si natrénovať model umelej inteligenice na rozpoznávanie d
     ```
 4. **Nainštalujte PyTorch s podporou CUDA (len ak máč NVIDIA GPU)**
     - Na stránke [pytorch.org](https://pytorch.org/get-started/locally/) si vygenerujte príkaz pre inštaláciu verzie s podporou CUDA. Napr. (príklad, môže sa meniť podľa verzií):
-    - ```pip install torch torchvision torchaudio --index-url <https://download.pytorch.org/whl/cu118>```
+    - ```pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118```
     - Skontrolujte, či vám PyTorch rozpoznal GPU:
     ```
     python
